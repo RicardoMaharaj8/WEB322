@@ -1,0 +1,36 @@
+<div id="errs">
+    {{#each errs}}
+    <p>{{this}}! Sorry!</p>
+    {{/each}}
+</div>
+
+<div id="entry">
+    <form action="/products/update/{{_id}}?method=PUT" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Edit Product: {{n}} </legend>
+
+            <label for="name"> Name </label> <br>
+            <input type="text" id="name" name="name" required="true" value="{{n}}"> <br> <br>
+
+            <label for="price"> Price </label> <br>
+            <input type="text" id="price" name="price" required="true" value="{{p}}"> <br> <br>
+
+            <label for="description"> Description </label> <br>
+            <textarea name="description" id="description" cols="30" rows="5" required="true">{{d}}</textarea> <br> <br>
+
+            <label for="category"> Category </label> <br>
+            <input type="text" id="category" name="category" required="true" value="{{c}}"> <br> <br>
+
+            <label for="quantity"> Quantity </label> <br>
+            <input type="number" id="quantity" name="quantity" required="true" value="{{q}}"> <br> <br>
+
+            <label for="bestseller"> Bestseller </label>
+            <input type="checkbox" name="bestseller" id="bestseller" {{#if b}} checked {{/if}} > <br> <br>
+
+            <label for="pic"> Picture </label> <br>
+            <input type="file" name="pic" id="pic" required="true" accept="image/*"> <br> <br>
+
+            <input type="submit" value="Save Edits">
+        </fieldset>
+    </form>
+</div>

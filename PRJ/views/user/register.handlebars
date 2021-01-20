@@ -1,0 +1,27 @@
+<div id="errs">
+    {{#each errs}}
+    <p>{{this}}! Sorry!</p>
+    {{/each}}
+</div>
+
+<div id="entry">
+    <form action="/user/register" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Create Account</legend>
+
+            <label for="name">Name</label> <br>
+            <input type="text" id="name" name="name" value={{name}}> <br> <br>
+
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="email" value={{email}}> <br> <br>
+
+            <label for="password">Password</label> <br>
+            <input type="text" id="password" name="password" value={{password}}> <br> <br>
+
+            <label for="pic"> Picture </label> <br>
+            <input type="file" name="pic" id="pic" accept="image/*"> <br> <br>
+
+            <input type="submit" value="Create Account">
+        </fieldset>
+    </form>
+</div>

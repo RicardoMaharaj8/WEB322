@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amazon - {{title}} </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<header>
+    <a href="/"> <img src="/img/amazon-logo.png" width="200"> </a>
+    <nav>
+        <a href="/products/view"> Products </a>
+        {{#if user}}
+        <a href="/user/dash"> Dashboard </a>
+        <a href="/user/logout"> Logout </a>
+        {{else}}
+        <a href="/user/register"> Register </a>
+        <a href="/user/login"> Login </a>
+        {{/if}}
+    </nav>
+</header>
+
+<body>
+    {{{body}}}
+</body>
+
+<footer>
+    <a href="https://twitter.com/Amazon"><img src="/img/icons/tw.png" alt=""></a>
+    <a href="https://www.facebook.com/Amazon"><img src="/img/icons/fb.png" alt=""></a>
+    <a href="https://www.instagram.com/Amazon"><img src="/img/icons/insta.png" alt=""></a>
+</footer>
+
+</html>

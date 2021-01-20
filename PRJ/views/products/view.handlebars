@@ -1,0 +1,24 @@
+<h2> Products: </h2>
+<div id="search">
+    <form action="/products/search" method="post">
+        <label for="search"> Search By Section </label>
+        <select name="search" id="search">
+            {{#each cats}}
+            <option value=" {{this}} "> {{this}} </option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Search">
+    </form>
+</div>
+<br> <br>
+<div id="products">
+    {{#each prods}}
+    <fieldset>
+        <legend>{{this.n}} {{#if this.b}}<strong id="bestseller">BESTSELLER!</strong>{{/if}}</legend>
+        <figure>
+            <a href="/products/view/{{this._id}}"><img src="/img/products/{{this.i}}" width="300" height="200"></a>
+            <figcaption>${{this.p}}</figcaption>
+        </figure>
+    </fieldset>
+    {{/each}}
+</div>

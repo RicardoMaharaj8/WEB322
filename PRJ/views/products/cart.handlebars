@@ -1,0 +1,14 @@
+<div id="cart">
+    <form action="/products/checkout" method="post">
+        <fieldset {{#if b}} style="border-color: rgb(255, 145, 0);" {{/if}}>
+            <legend>{{n}}</legend>
+            <figure>
+                <img src="/img/products/{{i}}" width="150" height="100">
+                <p>Total: ${{p}}</p>
+                <p>Quantity: {{q}}</p>
+                <input type="submit" value="Checkout">
+            </figure>
+        </fieldset>
+        <br>
+    </form>
+</div>

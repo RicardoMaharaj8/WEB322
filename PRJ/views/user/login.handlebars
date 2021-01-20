@@ -1,0 +1,21 @@
+<div id="errs">
+    {{#each errs}}
+    <p>{{this}}! Sorry!</p>
+    {{/each}}
+</div>
+
+<div id="entry">
+    <form action="/user/login" method="post">
+        <fieldset>
+            <legend>Log In</legend>
+
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="email" value={{email}}> <br> <br>
+
+            <label for="password">Password</label> <br>
+            <input type="text" id="password" name="password" value={{password}}> <br> <br>
+
+            <input type="submit" value="Log In">
+        </fieldset>
+    </form>
+</div>

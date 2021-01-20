@@ -1,0 +1,32 @@
+<div id="home">
+    <div id="promo">
+        <a href="https://www.amazon.ca"></a>
+    </div>
+
+    <div id="secs">
+        {{#each secs}}
+        <figure>
+            <img src="{{this.i}}">
+            <figcaption>{{this.n}}</figcaption>
+        </figure>
+        {{/each}}
+    </div>
+
+    <br>
+
+    <h2> Best Sellers: </h2>
+
+    <div id="products">
+        {{#each prods}}
+        {{#if this.b}}
+        <fieldset>
+            <legend>{{this.n}}</legend>
+            <figure>
+                <a href="/products/view/{{this._id}}"> <img src="/img/products/{{this.i}}" alt="" width="300" height="200"> </a>
+                <figcaption> ${{this.p}} </figcaption>
+            </figure>
+        </fieldset>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>

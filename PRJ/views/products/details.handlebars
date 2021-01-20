@@ -1,0 +1,19 @@
+<div id="details">
+    <form action="/products/cart/{{_id}}" method="post">
+        <fieldset {{#if b}} style="border-color: rgb(255, 145, 0);" {{/if}}>
+            <legend>{{n}}</legend>
+            <figure>
+                <img src="/img/products/{{i}}" width="300" height="200">
+                <figcaption>{{d}}</figcaption>
+                <p>${{p}}</p>
+                <p>Quantity: {{q}}</p>
+            </figure>
+        </fieldset>
+        <br>
+        {{#if user}}
+        <label for="quantity"> Quantity to add to cart: </label>
+        <input type="number" name="quantity" id="quantity" required="true">
+        <input type="submit" value="Add To Cart">
+        {{/if}}
+    </form>
+</div>

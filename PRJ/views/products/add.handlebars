@@ -1,0 +1,36 @@
+<div id="errs">
+    {{#each errs}}
+    <p>{{this}}! Sorry!</p>
+    {{/each}}
+</div>
+
+<div id="entry">
+    <form action="/products/add" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Create Product </legend>
+
+            <label for="name"> Name </label> <br>
+            <input type="text" id="name" name="name" required="true"> <br> <br>
+
+            <label for="price"> Price </label> <br>
+            <input type="text" id="price" name="price" required="true"> <br> <br>
+
+            <label for="description"> Description </label> <br>
+            <textarea name="description" id="description" cols="30" rows="5" required="true"></textarea> <br> <br>
+
+            <label for="category"> Category </label> <br>
+            <input type="text" id="category" name="category" required="true"> <br> <br>
+
+            <label for="quantity"> Quantity </label> <br>
+            <input type="number" id="quantity" name="quantity" required="true"> <br> <br>
+
+            <label for="bestseller"> Bestseller </label>
+            <input type="checkbox" name="bestseller" id="bestseller"> <br> <br>
+
+            <label for="pic"> Picture </label> <br>
+            <input type="file" name="pic" id="pic" required="true" accept="image/*"> <br> <br>
+
+            <input type="submit" value="Create Product">
+        </fieldset>
+    </form>
+</div>
